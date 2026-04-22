@@ -1,0 +1,161 @@
+:root {
+  --bg: #f7f4ee;
+  --surface: #fffdf9;
+  --text: #1f2328;
+  --muted: #5d626a;
+  --accent: #8f3b2e;
+  --line: #d7d0c5;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Manrope", "Segoe UI", sans-serif;
+  color: var(--text);
+  background: radial-gradient(circle at top right, #efe7d7 0, var(--bg) 45%, #f3f0e8 100%);
+  line-height: 1.6;
+}
+
+.wrap {
+  width: min(980px, 92vw);
+  margin: 0 auto;
+}
+
+.hero {
+  padding: 72px 0 48px;
+  border-bottom: 1px solid var(--line);
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 280px;
+  gap: 24px;
+  align-items: end;
+}
+
+.eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.75rem;
+  color: var(--muted);
+  margin: 0 0 0.8rem;
+}
+
+h1,
+h2 {
+  font-family: "Fraunces", Georgia, serif;
+  line-height: 1.2;
+}
+
+h1 {
+  margin: 0;
+  font-size: clamp(2rem, 4.4vw, 3.4rem);
+}
+
+.lead {
+  margin-top: 1rem;
+  max-width: 68ch;
+  color: var(--muted);
+  font-size: 1.05rem;
+}
+
+.social-links {
+  margin-top: 1.2rem;
+  display: flex;
+  gap: 0.65rem;
+  flex-wrap: wrap;
+}
+
+.social-links a {
+  text-decoration: none;
+  color: var(--accent);
+  border: 1px solid var(--accent);
+  border-radius: 999px;
+  padding: 0.35rem 0.8rem;
+  font-size: 0.9rem;
+}
+
+.hero-photo {
+  margin: 0;
+}
+
+.hero-photo img {
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  object-position: center 20%;
+  display: block;
+  border-radius: 14px;
+  border: 1px solid var(--line);
+}
+
+.hero-photo figcaption {
+  margin-top: 0.45rem;
+  color: var(--muted);
+  font-size: 0.78rem;
+}
+
+main {
+  padding: 36px 0;
+}
+
+section {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-left: 4px solid var(--accent);
+  border-radius: 14px;
+  padding: 22px;
+  margin-bottom: 18px;
+}
+
+h2 {
+  margin: 0 0 0.8rem;
+  font-size: 1.4rem;
+}
+
+.meta {
+  margin-top: -0.3rem;
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+
+ul {
+  margin: 0.6rem 0 0;
+  padding-left: 1.2rem;
+}
+
+li + li {
+  margin-top: 0.4rem;
+}
+
+.footer {
+  padding: 0 0 44px;
+  color: var(--muted);
+  font-size: 0.93rem;
+}
+
+.footer a {
+  color: var(--accent);
+}
+
+@media (max-width: 720px) {
+  .hero {
+    padding-top: 56px;
+  }
+
+  .hero-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-photo {
+    max-width: 290px;
+    margin: 0 auto;
+  }
+
+  section {
+    padding: 16px;
+  }
+}
